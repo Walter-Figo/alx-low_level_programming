@@ -11,7 +11,8 @@
  */
 int main(void)
 {
-	char buffer[1024] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	char buffer[1024] =
+			"and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
 	write(2, &buffer, strlen(buffer));
 	return (1);
