@@ -1,12 +1,15 @@
 #include "main.h"
+
+
 /**
- * main - Print the alphabet
+ * print_alphabet - Print the alphabet
+ * Return: void
  */
 void print_alphabet(void)
 {
-	char letter;
+	char ch;
 
-	for (letter = 'a'; letter <= 'z'; letter++)
-		_putchar(letter);
+	for (ch = 'a'; ch <= 'z'; ch++)
+		_putchar(ch);
 	_putchar('\n');
 }
