@@ -2,7 +2,7 @@
 
 /**
  * jack_bauer - prints every minute of the day of Jack Bauer.
- * Return: ...
+ * Return: ....
  */
 
 void jack_bauer(void)
@@ -24,9 +24,10 @@ void jack_bauer(void)
 						_putchar(58);
 						_putchar(d + '0');
 						_putchar('\n');
-					}
-				}
-			}
-		}
-	}
+
+}
+}
+}
+}
+}
 }
