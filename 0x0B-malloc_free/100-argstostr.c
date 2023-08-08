@@ -2,7 +2,7 @@
 #include "main.h"
 /**
  * argstostr - concatenates all the arguments of a program.
- * @ac: The number of arguments 
+ * @ac: The number of arguments
  * @av: Array of arguments
  * Return: Pointer to a new string, NULL otherwise.
  */
