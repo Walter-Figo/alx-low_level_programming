@@ -8,7 +8,7 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int a, b, c, d;
+	int a, b, len = 0, total_len = 0;
 	char *str;
 
 	if (ac == 0 || av == 0)
@@ -16,29 +16,29 @@ char *argstostr(int ac, char **av)
 
 	for (a = 0; a < ac; a++)
 	{
-		for (b = 0; av[a][b] != '\0'; b++)
-			d++;
-	}
-		d += ac;
+		for (len = 0; av[a][len] != '\0'; len++)
 
-	str = malloc(sizeof(char) * (d + 1));
+		total_len += len;
+	}
+	total_len += ac + 1;
+
+	str = malloc(sizeof(char) * total_len);
 
 	if (str == NULL)
 		return (NULL);
 
-	c = 0;
+	len = 0;
 
 	for (a = 0; a < ac; a++)
 	{
 		for (b = 0; av[a][b]; b++)
 		{
-			str[c] = av[a][b];
-			c++;
-		}
-		if (str[c] == '\0')
-		{
-			str[c++] = '\n';
-		}
+			str[len] = av[a][b];
+			len++;
+			}
+		str[len] = '\n';
+		len++;
 	}
+	str[len] = '\0';
 	return (str);
 }
